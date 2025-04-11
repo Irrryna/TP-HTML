@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -22,7 +23,8 @@
         
     <section id="articles"> 
         <h2> Liste des articles </h2>
-        <article class="article1">
+        <div class ="art-container">
+        <article class="article">
             <h3>Article Un</h3>
             <p> Benoît DUPOND</p>
             <p> 08.02.2025 </p>
@@ -30,7 +32,7 @@
             <a href="article1.html">Ceci est le lien vers la page complète de l'article</a>
         </article>
            
-        <article class="article2">
+        <article class="article">
             <h3>Article Deux </h3>
             <p> Alice MILLER </p>
             <p> 15.03.2025 </p>
@@ -38,23 +40,31 @@
             <a href="article2.html">Ceci est le lien vers la page complète de l'article</a>
         </article>
 
-        <article class="article3">
+        <article class="article">
             <h3>Article Trois </h3>
             <p> Jean JAURES </p>
             <p> 08.04.2025 </p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi delectus doloribus sit dicta, nostrum inventore. Expedita, a? Quod iure voluptate qui ab eaque accusamus minus, delectus iste quia veritatis impedit.</p>
             <a href="article3.html">Ceci est le lien vers la page complète de l'article</a>
         </article>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contactez-moi</h2>
-        <a href="contact.html">Ceci est le lien vers mes contacts</a>
-         
-
-     </section>    
     
-
-
+    <section id="projets">
+        <section class="key">
+            <h2> Keyframes </h2>
+            <p> Ceci est un carré qui se déplace de gauche à droite en boule</p>
+            <div id="carre">
+            </div>    
+        </section>      
+    </section>
+    
 </body>
+<footer>
+    <section id="contact">
+        <h4>Contactez-moi</h4>
+        <a href="contact.html">Ceci est le lien vers mes contacts</a>
+     </section>    
+    <p> © 2025 Mon Blog. Fait avec <img src=tasse.png alt="café"> </p>
 </html>
