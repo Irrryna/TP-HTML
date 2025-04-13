@@ -1,0 +1,30 @@
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--color-background); 
+    color: var(--color-text);
+}
+
+h1 {
+    font-size: 1em;
+    text-align: center;
+    margin-top: 30px;
+    color: #7a8cc8;
+}
+h2 {
+    font-size: var(--subtitle-size);
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+nav {
+    background-color: #2E3648  ;
+    padding: 5px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    font-size: 0.6em;
+
+}    

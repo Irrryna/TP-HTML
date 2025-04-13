@@ -11,6 +11,9 @@
     --color-secondary: #7a8cc8;
     --color-accent: #15c5e3;
     --color-stroke: #7a8cc8;
+    --text-size: 12px;
+    --title-size: 32px;
+    --subtitle-size: 24px;
 }
 body {
     font-family: 'Courier New', Courier, monospace;
@@ -19,12 +22,12 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: var(--title-size);
     text-align: center;
     margin-top: 70px;
 }
 h2 {
-    font-size: 2rem;
+    font-size: var(--subtitle-size);
     text-align: center;
     margin-top: 20px;
 }
@@ -49,7 +52,6 @@ nav {
 .nav-button li a {
     display: block;
     text-decoration: none;
-    color: #ffffff;
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -57,22 +59,13 @@ nav {
     list-style: none;
 }
 
-.nav-button li a:hover {
-    color: #01141c; 
-}
-
-.nav-button a {
+.link {
     text-decoration: none;
     padding: 15px 20px;
     margin: 0 5px;
     border: 2px solid #7a8cc8; 
     border-radius: 5px;
     transition: all 0.3s ease;
-}
-
-.nav-button a:hover, .nav-button a.nav-active {
-    border-color: #15c5e3;
-    background-color: rgba(151, 161, 232, 0.234);
     color: #FFFFFF;
 }
 
@@ -115,21 +108,35 @@ h3::before {
     font-size: 1rem;
     line-height: 1.5;
 }
+
 .article a {
     text-decoration: none;
     color: #007BFF;
     font-weight: bold;
 }
+
 .article a:hover {
     text-decoration: underline;
 }
+
 .article .content {
     margin-top: 20px;
 }
-a:visited {
-    color: #ee7baf; 
+
+.link:visited, a:visited,
+.link:focus, a:focus {
+    color: var(--color-accent);
 }
 
+.link:active {
+    border-color: #ee7baf;
+}
+
+.link:hover {
+    border-color: var(--color-stroke);
+    background-color: rgba(151, 161, 232, 0.234);
+    color: #FFFFFF;
+}
 a:active {
     color: #ff0000;
 }
@@ -149,7 +156,6 @@ a:active {
     width: 100px;
     height: 100px;
     background-color: rgba(183, 91, 162, 0.793);
-    border-radius: 50%;
     padding: 30px;
     animation: bougeDeGaucheADroite 3s ease-in-out infinite;
 }
@@ -170,6 +176,15 @@ footer {
     padding: 20px;
     width: 100%;
 }
+
+#contact a:link {
+    color: #F5F5F5;
+}
+
+#contact a:hover {
+    color: #ee7baf;
+}
+
 a {
     display: inline-block; 
     margin-top: 15px;
@@ -185,4 +200,36 @@ a {
         100% {
           transform: translateX(0);
         }
-      }
+}
+
+.style-overview {
+    padding-top:70px;
+}
+.style-overview:hover + h1 {
+    --title-size: 78px;
+}
+.style-overview:hover + h2 {
+    --title-size: 48px;
+}
+
+.box-1, .box-2 {
+    display: block;
+}
+
+.box-1 {
+    margin-top: 50px;    
+    width: 140px;
+    height: 140px;
+    background-color: #7a8cc8;
+    z-index: 1;
+    transform: rotate(45deg);
+}
+
+.box-2 {
+    width: 200px;
+    height: 200px;
+    margin-top: -70px;
+    background-color: #ee7baf;
+    z-index: 2;
+    opacity: 0.7;
+}
